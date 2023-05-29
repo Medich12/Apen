@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(function(){
+      $("#header").load("header.html");
+    });
+    $(function(){
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <link rel="stylesheet" href="/css/main.css">
+  <meta charset="UTF-8">
+  <title>Услуги</title>
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="service_container">
+
+      <div class="service fixed_width_standard center_block_margin">
+
+          <h2 class="color_white">Услуги</h2>
+          <hr>
+
+          <div class="service_grid">
+
+              <div class="service_grids" id="upgrade">
+                  <img src="../img/upgrade.png" alt="АПГРЕЙД-ЦЕНТР">
+
+                  <div class="service_title">
+                      <h4 class="color_white">ПРОКАЧАЙ СВОЙ ПК</h4>
+                      <h3 class="color_white">АПГРЕЙД-ЦЕНТР</h3>
+                      <a href=""><button class="button_standard button_service"><p >Подробнее</p></button></a>
+                  </div>
+
+              </div>
+              <div class="service_grids" id="maintenance">
+                  <img src="../img/maintenance.png" alt="Техническое обслуживание">
+                  <div class="service_title">
+                      <h4 class="color_white">ЗАБОТА О ВАШЕМ ПК</h4>
+                      <h3 class="color_white">ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ</h3>
+                      <a href=""><button class="button_standard button_service" ><p >Подробнее</p></button></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+
+  <div id="footer"></div>
+</body>
+</html>

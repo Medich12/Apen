@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            $(function(){
+                $("#header").load("html/header.html");
+            });
+            $(function(){
+                $("#footer").load("html/footer.html");
+            });
+            $( window ).resize(function(){
+                var a = $(window).height() - 60 - 50;
+                if(a<805){
+                    $(".contant_on_main_page").css("height", "820px");
+                }
+                else {
+                    $(".contant_on_main_page").css("height", "calc(100vh - 60px - 50px)");
+                }
+            });
+            $(function(){
+                var a = $(window).height() - 60 - 50;
+                if(a<805){
+                    $(".contant_on_main_page").css("height", "820px");
+                }
+                else {
+                    $(".contant_on_main_page").css("height", "calc(100vh - 60px - 50px)");
+                }
+            });
+        </script>
+        <link rel="stylesheet" href="css/main.css">
+        <meta charset="UTF-8">
+        <title>Apen - сборки на заказ</title>
+    </head>
+
+    <body>
+
+            <div class="first-monitor">
+                <div class="fixed_background">
+                    <video autoplay muted loop>
+                        <source src="img/main_page_bg.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
+                <div id="header"></div>
+                <div class="contant_on_main_page">
+                    <div class="fixed_width_standard center_block_margin container">
+                        <div class = "box_1">
+                            <h1 class="color_orange" style="margin-top: 60px">ApenPC</h1>
+                            <h2  class="color_white"  style="margin-top: 100px">Только <span class = "color_orange">качественные</span> сборки</h2>
+                            <button class="button_standard_main_page button_standard"><p class="color_white">Подробнее</p></button>
+                        </div>
+                        <div class = "box_2"></div>
+                        <div class = "box_3">
+                             <a href="html/assemblies.php">
+                                <div class = "cart_on_main_page center_block_margin">
+                                    <div class="icons"></div>
+                                     <div class="title"> <h3 class="color_white">Сборки</h3></div>
+                                </div>
+                             </a>
+                        </div>
+                        <div class = "box_4">
+                            <a href="html/services.html">
+                                <div class = "cart_on_main_page center_block_margin">
+                                    <div class="icons"></div>
+                                    <div class="title"> <h3 class="color_white">Услуги</h3></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#down"><div class="arrow"><img src="../img/arrow.png" alt="arrow" class = "center_block_margin"></div></a>
+            </div>
+            <div class="how_we_working" id="down">
+                <div class="center_block_margin fixed_width_standard">
+                    <div class="how_we_working_h center_block_margin">
+                        <h3>КАК МЫ РАБОТАЕМ</h3>
+                        <h3 class="subtitle">ApenPC</h3>
+                        <h3 class="subtitle">Вы</h3>
+                    </div>
+                    <div class="scheme">
+                        <img src="../img/sxema.svg" alt="">
+                        <svg>
+                            <polygon data-id="1" points="1032,71 737,71 737,171 1032,171"></polygon>
+                            <polygon data-id="2" points="506,117 211,117 211,217 506,217"></polygon>
+                            <polygon data-id="3" points="506,265 211,265 211,365 506,365"></polygon>
+                            <polygon data-id="4" points="506,441 211,441 211,541 506,541"></polygon>
+                            <polygon data-id="5" points="506,608 211,608 211,708 506,708"></polygon>
+                            <polygon data-id="6" points="506,772 211,772 211,872 506,872"></polygon>
+                            <polygon data-id="7" points="1032,349 737,349 737,449 1032,449"></polygon>
+                            <polygon data-id="8" points="1028,690 733,690 733,790 1028,790"></polygon>
+                            <polygon data-id="9" points="190,49 0,49 0,116 190,116"></polygon>
+                            <polygon data-id="10" points="190,367 0,367 0,434 190,434"></polygon>
+                            <polygon data-id="11" points="190,540 0,540 0,607 190,607"></polygon>
+                            <polygon data-id="12" points="190,712 0,712 0,779 190,779"></polygon>
+                        </svg>
+                            <div class="scheme-item" data-id="1" style="top: 113px; left: 800px;">
+                                <div class="scheme-name">Заполнение формы</div>
+                                <div class="scheme-popup">
+                                    Сеть магазинов «Детский мир» - крупнейший розничный оператор торговли
+                                    детскими товарами и лидер рынка.
+                                </div>
+                            </div>
+
+                            <div class="scheme-item" data-id="2" style="top: 154px; left: 252px;">
+                                <div class="scheme-name">Согласование и <br> подбор комплектующих</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="3" style="top: 308px; left: 238px;">
+                                <div class="scheme-name">Составление заказа в DNS</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="4" style="top: 486px; left: 255px;">
+                                <div class="scheme-name">Сборка и установка ПО</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="5" style="top: 648px; left: 274px;">
+                                <div class="scheme-name">Доставка до двери</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="6" style="top: 814px; left: 256px;">
+                                <div class="scheme-name">Постпродажный сервис</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="7" style="top: 390px; left: 790px;">
+                                <div class="scheme-name">Оплата заказа в DNS</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="8" style="top: 732px; left: 789px;">
+                                <div class="scheme-name">Оплата наших услуг</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="9" style="top: 66px; left: 6px;">
+                                <div class="scheme_name_date">День заполнения <br> формы</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="10" style="top: 392px; left: 6px;">
+                                <div class="scheme_name_date">День поставки</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="11" style="top: 561px; left: 6px;">
+                                <div class="scheme_name_date">Назначенная дата <br> доставки</div>
+                                <div class="scheme-popup">
+                                    Сеть специализированных спортивных магазинов
+                                    «Триал-Спорт». Снаряжение, одежда и аксессуары для активного отдыха и спорта!
+                                </div>
+                            </div>
+                            <div class="scheme-item" data-id="12" style="top: 730px; left: 17px;">
+                                <div class="scheme_name_date">Год <br> обслуживания</div>
+                                <div class="scheme-popup">
+                                    Год бесплатного обслуживания: замена термопасты, очистка вентилятора
+                                </div>
+                            </div>
+                            <script src="js/main.js"></script>
+                    </div>
+                    <div class="buttons center_block_margin">
+                            <button class="button_standard button_standard_slider button_start_now">
+                                <p class="color_orange">Начать сейчас</p>
+                            </button>
+                            <button class="button_standard button_standard_slider"><p class="color_white">Подробнее</p></button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider center_block_margin">
+                <div class="slide_bg center_block_margin">
+                    <div class="slider_line">
+                        <div class="slide">
+                            <h3 class="color_white">Акция "приведи друга"*</h3>
+                            <p class="color_white">За приведенного друга, который купил у нас ПК, мы переведем тебе 500р, а твоему другу дадим скидку на наши услуги 1000р.<p>
+                            <p class="color_white correction">*Акции не суммируются между собой. Применяется наиболее выгодная для тебя акция.</p>
+                        </div>
+                        <div class="slide">
+                            <h3 class="color_white">Промокоды*</h3>
+                            <p class="color_white">Иногда в нашем сообществе вк будут публиковаться промокоды на скидку. Они могут находиться в постах, картинках или рекламе. Поэтому следи за обновлениями, чтобы получить максимальную выгоду!<p>
+                            <p class="color_white correction">*Акции не суммируются между собой. Применяется наиболее выгодная для тебя акция.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="black_filter"></div>
+                <div class="fixed_width_standard center_block_margin">
+                    <button class="slider_prev"><img src="img/left_arrow_slider.png" alt=""></button>
+                    <button class="slider_next"><img src="img/right_arrow_slider.png" alt=""></button>
+                </div>
+                <script src="js/slider.js"></script>
+            </div>
+
+        <div id="footer"></div>
+    </body>
+</html>
