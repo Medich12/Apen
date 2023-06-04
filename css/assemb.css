@@ -1,0 +1,667 @@
+/*css reset*/
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1;
+
+    position: relative;
+    min-height: 100%;}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+:root {
+    --main-color: #CECECE;
+    --alter-color-orange-dark: #89470A;
+    --main-color-rgba-transparent: rgba(206, 206, 206, .5);
+    --alter-color-black-rgba-transparent: rgba(0, 0, 0, .9);
+    --main-color-rgba: rgba(206, 206, 206);
+    --alter-color-gray: #141413;
+    --alter-color-orange: #FF7A00;
+    --alter-color-black: #000000;
+    --max--width: 1240px;
+}
+:root {
+    font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: 'Inter var', sans-serif; }
+}
+header{
+    height: 50px;
+    width: 100%;
+}
+
+.menu{
+    border-bottom:1px solid var(--alter-color-black);
+    padding-bottom: 10px;
+}
+.menu:hover{
+    border-bottom:2px solid var(--alter-color-orange);
+    color: var(--alter-color-orange);
+
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* ///////////..utility classes../////////// */
+
+
+
+.container_nav {
+    max-width: 1240px;
+    width: 90%;
+    margin: auto;
+}
+
+/* ............/navbar/............ *
+
+/* desktop mode............/// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background: var(--alter-color-black);
+    color: var(--main-color);
+    height: 50px;
+    z-index: 12;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: flex-end;
+}
+
+.menu-items {
+    z-index: 1000;
+    order: 2;
+    display: flex;
+}
+
+.menu-items li {
+    list-style: none;
+    margin-left: 2.5rem;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.logo {
+    order: 1;
+    font-size: 2.3rem;
+    height: 1.2em;
+}
+
+
+
+
+/* ......../ media query /.......... */
+
+@media (max-width: 768px) {
+    .navbar {
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+        display: block;
+    }
+
+    .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .navbar-container .hamburger-lines {
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 17px;
+
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: var(--alter-color-orange);
+    }
+
+    .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar .menu-items {
+        padding-top: 100px;
+        background: var(--alter-color-black);
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+
+    }
+    .navbar .menu-items li .menu{
+        padding-bottom: 2px;
+    }
+    .navbar .menu-items li {
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .logo {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        font-size: 2rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(35deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-35deg);
+    }
+
+    /* ......./ food /......... */
+
+    .food-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .food-type:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    .food-type {
+        box-shadow: 5px 5px 10px 0 #aaa;
+    }
+
+    .img-container {
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 65%;
+    }
+
+    .navbar .menu-items li{
+        font-size: 1.6rem;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .food-menu-container img {
+        margin: auto;
+    }
+
+    .food-menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-img {
+        width: 90%;
+        margin: 3rem auto;
+    }
+
+    .logo {
+        position: absolute;
+        top: 06px;
+        right: 15px;
+        font-size: 3rem;
+    }
+
+    .navbar .menu-items li {
+        margin-bottom: 2.5rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .img-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .img-container .btn {
+        font-size: 0.7rem;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .showcase-area {
+        height: 50vmax;
+    }
+}
+
+
+/*Стили для фильтра*/
+.assemblies_grid{
+    display: flex;
+
+    padding-top: 38px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+
+.assemb{
+    display: flex;
+    flex-wrap: wrap;
+}
+.assemb::after {
+    content: "";
+    flex: auto;
+    justify-content: space-between;
+}
+.bg{
+    background-color: var(--alter-color-gray);
+    min-height: calc(100vh - 264px);
+}
+.assemblies_grids h3, hr, p{
+    color: var(--main-color);
+}
+.inc_title p{
+    display:inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.assemblies_grids h3{
+    margin-bottom: 10px;
+}
+hr{
+    margin: 0;
+}
+.inc img{
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.inc_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+/*Стили для адаптива страницы сборок*/
+@media (min-width: 1380px){
+
+
+    .assemblies{
+        width: 30%;
+        margin-left: 30px;
+    }
+}
+@media (min-width: 1030px) and (max-width: 1380px){
+
+    .assemb{
+        width: calc(90% + 2*30px - 224px);
+    }
+
+
+    .filers{
+        width: 224px;
+    }
+
+    .assemblies{
+        margin-left: 30px;
+        width: 45%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1030px){
+    .assemb{
+        width: calc(100% + 30px - 224px);
+    }
+
+
+    .filers{
+        width: 224px;
+    }
+
+    .assemblies{
+        width: 100%;
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .filters_container{
+        z-index: 100;
+        padding-left: 100px;
+        position: fixed;
+        width: 100%;
+        padding-right: 100px;
+        padding-top: 100px;
+        left: 0;
+        height: 100vh;
+        background: black;
+        opacity: 0.95;
+    }
+    .filers > h3{
+        cursor: pointer;
+
+    }
+    .filers input[type="checkbox"]:checked ~ .filters_container{
+        transform: translateX(0);
+    }
+    .filters_container{
+        transform: translate(-150%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+
+
+    .assemblies_grid{
+        flex-direction: column;
+    }
+    .assemb{
+        width: 100%;
+    }
+
+
+    .filers{
+        width: 224px;
+    }
+
+    .assemblies{
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+.filers input[type="checkbox"] {
+    position: relative;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    z-index: 5;
+    opacity: 0;
+}
+.filers > h3{
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.assemblies{
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px;
+
+
+    margin-bottom: 50px;
+    border: 1px solid var(--main-color-rgba-transparent);
+    flex-direction: column;
+    float: left;
+
+    border-radius: 20px;
+
+}
+.assemblies:hover{
+
+    border: 1px solid var(--main-color-rgba-transparent);
+    box-shadow: 0 0 50px var(--main-color-rgba-transparent);
+}
+
+.img_preview{
+    width: 235px;
+    height: 283px;
+    display: block;
+    object-fit: cover;
+}
+.assemblies .assemb_title{
+    margin-top: 11px;
+    color: var(--alter-color-orange-dark);
+}
+.assemblies hr{
+    margin-top: 17px;
+    display: block;
+    border: 0;
+    border-bottom: 1px solid var(--alter-color-orange-dark);
+}
+.assemblies .configuration p{
+    margin-top: 1px;
+    font-size: 14px;
+    margin-bottom: 1px;
+
+}
+hr{
+    border: 0;
+    border-bottom: 1px solid;
+}
+.assemblies h4{
+    margin-top: 16px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 14px;
+    text-align: center;
+}
+.configuration{
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.configuration img{
+    display: flex;
+}
+.configuration_subtitle{
+    margin-left: 15px;
+    flex-direction: column;
+    display: flex;
+}
+
+.button_assemblies{
+    display: block;
+    text-align: center;
+    width: 162px;
+    height: 38px;
+    background-color: var(--alter-color-orange-dark);
+    z-index: 2;
+    position: relative;
+}
+.button_assemblies:hover{
+    background-color: var(--alter-color-orange);
+}
+
+section{
+    padding-bottom: 5px;
+}
+label{
+    align-items: center;
+    display: flex;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.inc_sec{
+    display: none;
+}
+.inc_sec span{
+    color: var(--main-color);
+    font-size: 16px;
+}
+.checkbox {
+    margin-bottom: 0.2em;
+}
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox>span::before {
+    margin-right: 10px;
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    background-repeat: no-repeat;
+
+
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: var(--alter-color-orange);
+}
+
+
+#btn_refresh{
+    display: block;
+    margin-top: 10px;
+    width: 224px;
+}
+
+
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+    border-color: rgba(206, 206, 206, 0);
+    border: 0;
+    width: calc(1em + 2px);
+    height: calc(1em + 2px);
+    background-image: url("../img/selected.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox>input:disabled+span::before {
+    background-color: #e9ecef;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

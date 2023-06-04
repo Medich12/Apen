@@ -47,5 +47,16 @@ $(document).ready(function() {
 
     });
 });
-
+// $(document).ready(function() {
+//     const breakpoint = window.matchMedia("(max-width: 768px)");
+//     if (breakpoint.matches) {
+//         $('.filers').on('click', function () {
+//             $(this).siblings('.filers section').hide(300);
+//             $(this).siblings('section').css('display: block!important;')
+//             console.log('Все ок');
+//         })
+//     }
+//
+//
+// });
 

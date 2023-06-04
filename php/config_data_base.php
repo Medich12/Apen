@@ -1,6 +1,6 @@
 <?php
 function connectDB(){
-    $servername = "77.34.255.199:3306";
+    $servername = "77.35.222.20:3306";
     $database = "apen";
     $username = "intuser";
     $password = "Googlego1!";
